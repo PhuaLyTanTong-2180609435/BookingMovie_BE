@@ -23,8 +23,8 @@ public class Seat {
     private boolean isBooked; // Trạng thái của ghế (đã được đặt hay chưa)
 
     @ManyToOne
-    @JoinColumn(name = "cinema_id", nullable = false)
-    private Cinema cinema; // Rạp mà ghế này thuộc về
+    @JoinColumn(name = "room_id", nullable = false)
+    private Room room; // Phòng chiếu mà ghế này thuộc về
 
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
