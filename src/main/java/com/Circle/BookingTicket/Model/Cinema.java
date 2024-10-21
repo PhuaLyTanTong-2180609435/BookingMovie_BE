@@ -25,8 +25,8 @@ public class Cinema {
     @JoinColumn(name = "branch_id", nullable = false)
     private Branch branch; // Chi nhánh mà rạp này thuộc về
 
-    @OneToMany(mappedBy = "cinema")
-    private List<Seat> seats; // Danh sách các ghế trong rạp
+    @OneToMany(mappedBy = "cinema", cascade = CascadeType.ALL)
+    private List<Room> rooms; // Danh sách các phòng chiếu trong rạp
 
     @OneToMany(mappedBy = "cinema")
     private List<ShowTime> showTimes; // Danh sách các suất chiếu tại rạp
